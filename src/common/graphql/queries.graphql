@@ -1,0 +1,10 @@
+query getStudents {
+  students {
+    nodes {
+      id,
+      key,
+      name
+    }
+    totalCount
+  }
+}

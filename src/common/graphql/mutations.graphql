@@ -1,0 +1,13 @@
+mutation CreateStudent($input: CreateOneStudentInput!) {
+  createOneStudent(input: $input) {
+    id,
+    key,
+    name
+  }
+}
+
+mutation DeleteStudent($input: DeleteOneStudentInput!) {
+  deleteOneStudent(input: $input) {
+    deletedAt
+  }
+}
