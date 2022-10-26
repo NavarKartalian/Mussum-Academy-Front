@@ -1,12 +1,11 @@
+import '../styles/globals.css'
+
+import { ApolloProvider } from '@apollo/client'
+import { ChakraProvider } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'
 
-import { ChakraProvider } from '@chakra-ui/react';
-import { ApolloProvider } from '@apollo/client';
-
-import { theme } from '../common/theme/theme';
-import { client } from '../apollo';
-
-import '../styles/globals.css'
+import { client } from '../apollo'
+import { theme } from '../common/theme/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </ApolloProvider>
     </ChakraProvider>
-    );
+  )
 }
 
 export default MyApp

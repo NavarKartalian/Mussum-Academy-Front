@@ -1,12 +1,7 @@
-import { Input, InputProps } from "@chakra-ui/react";
+import { Input, InputProps } from '@chakra-ui/react'
 
-interface CustomInputProps extends InputProps {}
+type CustomInputProps = InputProps
 
 export function CustomInput({ ...rest }: CustomInputProps) {
-  return (
-    <Input 
-      maxW='320px'
-      {...rest}
-    />
-  );
+  return <Input maxW="320px" {...rest} />
 }

@@ -1,19 +1,23 @@
-import { Button, ButtonProps } from '@chakra-ui/react';
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
+
+import { Button, ButtonProps } from '@chakra-ui/react'
 
 interface CustomButtonProps extends ButtonProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
-export function CustomButton({ children, ...rest }: CustomButtonProps) {
+export function CustomButton({
+  children,
+  ...rest
+}: CustomButtonProps) {
   return (
     <Button
-      bg='blue.600'
-      _hover={{ bg: "blue.900" }}
-      py='6'
+      bg="blue.600"
+      _hover={{ bg: 'blue.900' }}
+      py="6"
       {...rest}
     >
       {children}
     </Button>
-  );
+  )
 }
